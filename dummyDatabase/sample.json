@@ -1,0 +1,76 @@
+module.exports = {
+  "0" : ["name", "time", "amount", "something", "something else", "closing thoughts"],
+
+  "1" : [
+              "John",
+              "two o clock",
+              "a million dollars",
+              "apple",
+              "zebra",
+              "no regrets"
+            ],
+
+  "2" : [
+              "John",
+              "two o clock",
+              "a million dollars",
+              "apple",
+              "zebra",
+              "no regrets"
+            ],
+
+  "3" : [
+              "John",
+              "two o clock",
+              "a million dollars",
+              "apple",
+              "zebra",
+              "no regrets"
+            ],
+
+  "4" : [
+              "John",
+              "two o clock",
+              "a million dollars",
+              "apple",
+              "zebra",
+              "no regrets"
+            ],
+
+  "5" : [
+              "John",
+              "two o clock",
+              "a million dollars",
+              "apple",
+              "zebra",
+              "no regrets"
+            ],
+
+  "6" : [
+              "John",
+              "two o clock",
+              "a million dollars",
+              "apple",
+              "zebra",
+              "no regrets"
+            ],
+
+  "7" : [
+              "John",
+              "two o clock",
+              "a million dollars",
+              "apple",
+              "zebra",
+              "no regrets"
+            ],
+
+  "8" : [
+              "John",
+              "two o clock",
+              "a million dollars",
+              "apple",
+              "zebra",
+              "no regrets"
+            ]
+
+}

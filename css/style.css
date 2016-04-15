@@ -7,33 +7,81 @@ body div div{
 #App {
   position: relative;
   width: 833px;
-  height: 544px;
+  height: auto;
+  border: none;
 }
 
 #NavBar {
-  width: 815px;
-  height: 36px;
-  top: 7px;
+  width: 1360px;
+  height: 42px;
+  top: 0px;
   left: 7px;
 }
 
 #Info {
-  width: 409px;
+  width: 670px;
   height: 134px;
   top: 51px;
   left: 7px;
 }
 
 #Search {
-  width: 393px;
+  width: 670px;
   height: 134px;
   top: 51px;
-  left: 429px;
+  left: 697px;
 }
 
 #Table {
-  width: 815px;
-  height: 339px;
+  width: 1360px;
+  height: 300px;
   top: 194px;
   left: 7px;
+  display: table;
+}
+
+.row {
+  display: block;
+  background-color: forestgreen;
+  color: white;
+  font-weight: bold;
+  position: relative;
+}
+
+.columnNames {
+  height: 30px;
+  background-color: dodgerblue;
+  color: white;
+  font-weight: bold;
+  display: block;
+  position: relative;
+}
+
+.name{
+  display: block;
+  background-color: forestgreen;
+  color: white;
+  font-weight: bold;
+  position: relative;
+}
+.time{
+  display: block;
+  background-color: forestgreen;
+  color: white;
+  font-weight: bold;
+  position: relative;
+}
+.amount{
+  display: block;
+  background-color: forestgreen;
+  color: white;
+  font-weight: bold;
+  position: relative;
+}
+.something{
+  display: block;
+  background-color: forestgreen;
+  color: white;
+  font-weight: bold;
+  position: relative;
 }
