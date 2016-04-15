@@ -8,15 +8,16 @@
     "type": "git",
     "url": "https://github.com/DBsKnees/DVision"
   },
-  "scripts": {
-    "prepublish": "./build",
-    "dvision": "node dvisionlaunch.js"
-  },
   "engines": {
     "node": ">=0.1.103"
   },
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "./build",
+    "test"
+    "dvision": "node dvisionlaunch.js"
+  },
   "devDependencies": {
-    "watchify": "^3.2.2",
     "gulp-nodemon": "^2.0.6"
   },
   "dependencies": {
