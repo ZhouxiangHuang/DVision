@@ -1,0 +1,39 @@
+
+body div div{
+  border: 1px solid black;
+  position: absolute;
+}
+
+#App {
+  position: relative;
+  width: 833px;
+  height: 544px;
+}
+
+#NavBar {
+  width: 815px;
+  height: 36px;
+  top: 7px;
+  left: 7px;
+}
+
+#Info {
+  width: 409px;
+  height: 134px;
+  top: 51px;
+  left: 7px;
+}
+
+#Search {
+  width: 393px;
+  height: 134px;
+  top: 51px;
+  left: 429px;
+}
+
+#Table {
+  width: 815px;
+  height: 339px;
+  top: 194px;
+  left: 7px;
+}
