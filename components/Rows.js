@@ -11,16 +11,17 @@ export default class Rows extends Component {
 
     for(var keys in rows) {
       if(keys !== "0"){
+        let key = 'row-'+ keys;
         rowDivs.push(
-          <Row className='Row' columns = {columns} rowData = {rows[keys]}/>
+          <Row index={keys} key={key} columns={columns} rowData={rows[keys]}/>
         )
       }
     }
 
     return (
-      <div id='RowsOuterDiv'>
+      <tbody>
         {rowDivs}
-      </div>
+      </tbody>
     )
   }
 }

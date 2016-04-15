@@ -5,14 +5,13 @@ import Rows from './Rows.js';
 
 export default class Table extends Component {
   render() {
-    const columnNames = this.props.database.database["0"];
-    const rows = this.props.database.database;
+    const columnNames = this.props.database.tableData["0"];
+    const rows = this.props.database.tableData;
     return (
-      <div id='Table'>
-      helloWorld
-      <Columns className='columns' columnNames={columnNames} />
+      <table id='Table'>
+      <Columns columnNames={columnNames} />
       <Rows className ='rows' rows={rows}/>
-      </div>
+      </table>
     )
   }
 }

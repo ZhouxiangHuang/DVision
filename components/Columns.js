@@ -7,17 +7,18 @@ export default class Columns extends Component {
     'use strict';
     const columnNames = this.props.columnNames;
     let columnDivs = [];
-
-    for(var i = 0; i < columnNames; i++) {
+    for(var i = 0; i < columnNames.length; i++) {
       columnDivs.push(
-        <div>{columnNames[i]}</div>
+        <th key={columnNames[i]}>{columnNames[i]}</th>
       )
     }
 
     return (
-      <div id='Columns'>
-      {columnDivs}
-      </div>
+      <thead>
+        <tr>
+          {columnDivs}
+        </tr>
+      </thead>
     )
   }
 }
