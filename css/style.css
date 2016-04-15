@@ -1,39 +1,69 @@
+* {
+  border: 1px solid dodgerblue;
+  padding: 2px;
+}
 
-body div div{
-  border: 1px solid black;
-  position: absolute;
+body {
+  width: 100%;
+
 }
 
 #App {
-  position: relative;
-  width: 833px;
-  height: 544px;
+  display: block;
+  width: 99%;
 }
 
 #NavBar {
-  width: 815px;
-  height: 36px;
-  top: 7px;
-  left: 7px;
+  width: 100%;
+  background-color: orange;
+  height: 30px;
+
 }
 
 #Info {
-  width: 409px;
-  height: 134px;
-  top: 51px;
-  left: 7px;
+  width: 46%;
+  height: 100px;
+  padding: auto;
+  display: inline-block;
+  margin: auto;
+  background-color: blanchedalmond;
 }
 
 #Search {
-  width: 393px;
-  height: 134px;
-  top: 51px;
-  left: 429px;
+  width: 46%;
+  height: 100px;
+  padding: 2px;
+  display: inline-block;
+  margin: auto;
+  background-color: blanchedalmond;
 }
 
 #Table {
-  width: 815px;
-  height: 339px;
-  top: 194px;
-  left: 7px;
+  width: 100%;
+  position: relative;
+}
+
+#next {
+    background-color: white;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 136px;
+
+    border: 1px solid black;
+}
+
+#previous {
+    background-color: white;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 136px;
+
+    border: 1px solid black;
+
 }
