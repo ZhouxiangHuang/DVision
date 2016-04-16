@@ -6,22 +6,24 @@ import Search from './Search';
 import Table from './Table';
 const database = require('../sample2.json');
 const tableLength = database.length;
-var tableNumber = 0;
+let tableNumber = 0;
+let largeData;
 export default class App extends Component {
 
   constructor(props) {
     super(props);
-    var tableData = database[tableNumber];
+    let tableData = database[tableNumber];
     this.state = { tableData }
     this.setNextTable = this.setNextTable.bind(this);
     this.setPreviousTable = this.setPreviousTable.bind(this);
+    this.displayData = this.displayData.bind(this);
   }
 
   setNextTable() {
 
     if(tableNumber === tableLength - 1) tableNumber = 0;
     else tableNumber++;
-    var tableData = database[tableNumber];
+    let tableData = database[tableNumber];
     this.setState({tableData})
   }
 
@@ -29,8 +31,13 @@ export default class App extends Component {
 
     if(tableNumber === 0) tableNumber = tableLength - 1;
     else tableNumber--;
-    var tableData = database[tableNumber];
+    let tableData = database[tableNumber];
     this.setState({tableData})
+  }
+
+  displayData(data) {
+    largeData = data;
+    this.forceUpdate();
   }
 
   render() {
@@ -38,8 +45,8 @@ export default class App extends Component {
       <div id='App'>
         <NavBar />
         <Info next = {this.setNextTable} previous = {this.setPreviousTable}/>
-        <Search />
-        <Table database={this.state}/>
+        <Search largeData = {largeData}/>
+        <Table database={this.state} displayData={this.displayData}/>
       </div>
     )
   }
