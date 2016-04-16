@@ -4,7 +4,7 @@ import NavBar from './NavBar';
 import Info from './Info';
 import Search from './Search';
 import Table from './Table';
-const database = require('./../dummyDatabase/sample.json');
+const database = require('../sample2.json');
 const tableLength = database.length;
 let tableNumber = 0;
 let largeData;

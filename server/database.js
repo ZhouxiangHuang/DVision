@@ -1,11 +1,12 @@
 var Sequelize = require('sequelize');
-
+const fs = require('fs');
 const pg = require('pg');
-const uri = 'postgres://dvision:division@localhost/dvisiondb';
+const uri = 'postgres://soloprojectuser:letmein@localhost/soloproject';
 
 
 
 pg.connect(uri, (err, db) => {
+  console.log("CONNECTED TO DATABASE...");
   new Promise(function(resolve, reject) {
     db.query("SELECT * FROM information_schema.tables WHERE table_schema = 'public'", (err, result) => {
       var tablenames = [];
@@ -19,68 +20,12 @@ pg.connect(uri, (err, db) => {
     var command = "SELECT * FROM " + names[i];
     db.query(command, (err, result) => {
       console.log("database      ", result.rows);
+
+      fs.writeFile('./sample2.json', JSON.stringify(result.rows), function(){
+        console.log("Finished creating file");
+        db.end();
+      });
       });
     }
   })
 })
-
-
-var sequelize = new Sequelize('dvisiondb', 'dvision', 'division', {
-  host: 'localhost',
-  dialect: 'postgres',
-
-  pool: {
-    max: 5,
-    min: 0,
-    idle: 10000
-  }
-  });
-
-var User = sequelize.define('user', {
-  un: Sequelize.STRING,
-    pw: Sequelize.STRING,
-    color1: Sequelize.STRING
-});
-
-// var Secondtable = sequelize.define('secondtable', {
-//   un: Sequelize.STRING,
-//     pw: Sequelize.STRING,
-//     color1: Sequelize.STRING
-// },
-// {
-//   freezeTableName: true,
-//   tableName: 'secondtable'
-// });
-
-
-// Secondtable.sync({force: true}).then(function () {
-//   return Secondtable.create({
-//     un: "Mark",
-//     pw: "This is Mark's password",
-//     color1: "purple"
-//   });
-// });
-
-// var json = {};
-//
-
-//
-// User.findAll({raw: true}).then(function(user) {
-//   var valueArray = [];
-//   for (var key in user[0]) {
-//     valueArray.push(key);
-//   }
-//   json[0] = valueArray;
-//   valueArray = [];
-//   for (var i = 0; i < user.length; i++) {
-//       for (var key in user[i]) {
-//         valueArray.push(user[i][key]);
-//     }
-//     json[i + 1] = valueArray;
-//     valueArray = [];
-//   }
-// })
-
-
-
-module.exports = User;

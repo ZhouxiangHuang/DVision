@@ -16,7 +16,8 @@
     "prestart": "npm run task",
     "start": "node server/server.js",
     "start-dev": "npm run task",
-    "task": "gulp"
+    "task": "gulp",
+    "dvision": "node index.js"
   },
   "devDependencies": {
     "gulp-nodemon": "^2.0.6",
