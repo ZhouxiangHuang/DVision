@@ -9,10 +9,38 @@ export default class Row extends Component {
     const columns = this.props.columns;
     let rowSpans = [];
 
-    for(var i = 0; i < rowData.length; i++) {
+    for(let i = 0; i < rowData.length; i++) {
       let key = columns[i] + '-' + this.props.index + '-' + i;
-      rowSpans.push(<td key={key}>{rowData[i]}</td>)
+      let data = rowData[i];
+      if(rowData[i].length < 50) {
+        rowSpans.push(<td key={key}>{data}</td>)
+      } else {
+        rowSpans.push(
+          <td key={key}>
+            <button onClick={(e) => {this.props.displayData(data)}} type="button">Display Data</button>
+          </td>
+        )
+      }
     }
+
+    /*
+
+    for(let i = 0; i < columns.length; i++) {
+      let column = columns[i];
+      let key = column + '-' + this.props.index + '-' + i;
+      let data = rowData[column];
+      if(data.length < 50) {
+        rowSpans.push(<td key={key}>{data}</td>)
+      } else {
+        rowSpans.push(
+          <td key={key}>
+            <button onClick={(e) => {this.props.displayData(data)}} type="button">Display + {column}</button>
+          </td>
+        )
+      }
+    }
+
+    */
 
     return (
       <tr id='RowsOuterDiv'>

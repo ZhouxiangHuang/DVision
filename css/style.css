@@ -5,12 +5,13 @@
 
 body {
   width: 100%;
-
+  border: none;
 }
 
 #App {
   display: block;
   width: 99%;
+  border: none;
 }
 
 #NavBar {
@@ -21,21 +22,22 @@ body {
 }
 
 #Info {
-  width: 46%;
-  height: 100px;
-  padding: auto;
+  width: 100%;
+  height: auto;
+  padding: 2px;
   display: inline-block;
   margin: auto;
-  background-color: blanchedalmond;
+  background-color: lemonchiffon;
 }
 
 #Search {
-  width: 46%;
-  height: 100px;
+  width: 100%;
+  height: auto;
   padding: 2px;
   display: inline-block;
   margin: auto;
   background-color: blanchedalmond;
+  word-wrap: break-word;
 }
 
 #Table {
