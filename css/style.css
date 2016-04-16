@@ -1,6 +1,5 @@
 * {
-  border: 1px solid dodgerblue;
-  padding: 2px;
+
 }
 
 body {
@@ -38,6 +37,7 @@ body {
   margin: auto;
   background-color: blanchedalmond;
   word-wrap: break-word;
+  border: orange;
 }
 
 #Table {

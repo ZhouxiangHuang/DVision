@@ -5,7 +5,8 @@ const dvisionserver = express();
 const Sequelize = require('sequelize');
 const fs = require('fs');
 const pg = require('pg');
-const uri = 'postgres://soloprojectuser:letmein@localhost/soloproject';
+const uri = 'postgres://andrewburke:govisualizer@localhost/govisualizer';
+
 
 
 dvisionserver.get(/.html$|.css$|.js$/, function(req, res) {
@@ -44,7 +45,7 @@ pg.connect(uri, (err, db) => {
             var command = "SELECT * FROM " + names[i];
             db.query(command, (err, result) => {
               console.log('I AM TRYING TO PUSH: ', JSON.stringify(result.rows).slice(0,20));
-              allTables.push(JSON.stringify(result.rows));
+              allTables.push(result.rows);
               console.log("Finished creating table " + i);
               if(allTables.length===names.length){
                 console.log('LENGTHS MATCHED!k!!!!!!!')
